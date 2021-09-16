@@ -1,0 +1,91 @@
+spring:
+  application:
+    name: GATEWAY-SERVICE
+  cloud:
+    gateway:
+      routes:
+        - id: business-one
+          uri: lb://BUSINESS-ONE
+          predicates:
+            - Path=/business-one/**
+        - id: business-one
+          uri: lb://BUSINESS-ONE
+          predicates:
+            - Path=/business-one-new/**      
+#          filters:
+#            - name: CircuitBreaker
+#              args:
+#                name: business-one
+#                fallbackuri: forward:/businessOneFallBack
+
+#zuul:
+#  routes:
+#    business:
+#        path: /business/**
+#        url: http://localhost:8763
+                
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka
+#    register-with-eureka: false
+#  instance:
+#    preferIpAddress: true
+    
+server:
+  port: 8080
+  
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: hystrix.stream
+
+#hystrix:
+#  command:
+#    fallbackcmd:
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 5000
+
+
+#eureka:
+#  instance:
+#    preferIpAddress : true
+#    prefer-ip-address: true
+#  client:
+#    registerWithEureka : true
+#    fetchRegistry : true
+#  serviceUrl:
+#    defaultZone : http://localhost:8761/eureka
+
+#server:
+#  port : 8080
+#  
+#  
+#spring:
+#  application:
+#    name : zuul-server
+#  cloud:
+#    gateway:
+#      routes: 
+#        - id: business-one
+#          uri: lb://business-one
+#          predicates:
+#          - Path=/business-one/**
+#  
+#eureka:
+#  instance:
+#    preferIpAddress : true
+#    prefer-ip-address: true
+#  client:
+#    registerWithEureka : true
+#    fetchRegistry : true
+#  serviceUrl:
+#    defaultZone : http://localhost:8761/eureka
+
+#zuul:
+#  routes:
+#    - id: myOtherRouting
+#      url: http://localhost:8763
