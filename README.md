@@ -1,5 +1,29 @@
 # Spring Microservices Architecture Initial Setup and Seed Proejct
 
+
+Here i was planning to set-up a full stack Application with java microservices as backend and angular as UI.Main moto of this setup is to understand of Full stack application work. where new commers or beginners can understand easily, How we can setup a production ready application easily.
+
+I will try to add many things in this setup so others people can understand or also can use same setup for their business.
+
+### Planing on setup.
+>I am planning to setup both things UI and Back-end also i will try to add Continuous delivery piple line with circleCI and also try add that application on cloud so for cloud we will use GCP.
+Thinks we will Implement
+
+IDE:- eclipse
+
+Back-end :- Java Spring boot with microservice architecture.
+
+UI:- Angular Latest Version
+
+Database:- Mysql
+
+Etc………
+
+##### So we are very clear about our setup
+
+Here you can clone this application and simply run on you machine and also you use for commercial use.
+## ...More content loading
+
 ###### Techonology We will use in project
 
 ## Eureka Discovery
